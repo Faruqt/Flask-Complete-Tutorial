@@ -1,0 +1,33 @@
+#db sql
+recipe/db.sqlite
+
+# Python
+*.py[cod]
+*.$py.class
+
+# VS Code
+*.vscode
+**/.vscode/
+
+# virtual environment
+.env/
+env/
+/.env
+
+# Flask
+*.log
+/logs
+*.pot
+*.pyc
+*__pycache__
+recipe/__pycache__
+# *media
+*.DS_Store
+
+# Backup Files
+*.bak
+
+#static files
+Todo/staticfiles
+./staticfiles
+
