@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles.css') }}">
+      <!-- favicon --> 
+      <link rel="shortcut icon" href="{{url_for('static', filename='Logo.svg')}}" />
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+
+      {% if request.url_rule.endpoint != 'index' %}   
+        {% if request.url_rule.endpoint != 'auth.login' %} 
+          {% if request.url_rule.endpoint != 'auth.register' %} 
+               <script src="{{ url_for('static', filename='sidebar.js') }}" defer></script>
+            {% endif %}
+        {% endif %}
+      {% endif %}
+      {% if title %}
+      <title>{{ title }} - Blog</title>
+      {% else %}
+      <title>Welcome to Blog</title>
+      {% endif %}
+    </head>
+    <body>
+        <!-- This prevents the WRAPPER class from activating on the main, sign in and register pages -->
+        {% if request.url_rule.endpoint != 'index' %}   
+            {% if request.url_rule.endpoint != 'auth.login' %} 
+                {% if request.url_rule.endpoint != 'auth.register' %} 
+        <div class="wrapper">  
+                {% endif %}
+            {% endif %}
+        {% endif %}
+                
+        <!-- This prevents the sidebar from showing up on the main, sign in and register pages -->
+        {% if request.url_rule.endpoint != 'index' %}   
+            {% if request.url_rule.endpoint != 'auth.login' %} 
+                {% if request.url_rule.endpoint != 'auth.register' %} 
+                            
+                    {% include 'sidebar.html' %}
+
+                {% endif %}
+            {% endif %}
+        {% endif %}
+        <!-- End of sidebar  -->        
+        {% block content %} {% endblock content%}
+        </div>
+    </body>
+</html>
