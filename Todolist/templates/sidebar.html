@@ -1,0 +1,18 @@
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" id="closebutton" class="closebtn">&times;</a>
+  <div class="top-sidebar">
+    <img src="" class="avatar-sm">&nbsp;{{current_user.username}}
+  </div>
+  
+  <ul>
+    <li><a class=" {% if request.url_rule.endpoint == 'home.homepage' %} active {% endif %}" href="{{url_for('home.homepage')}}"><i class="fa fa-home"></i>Home</a></li>
+    <li><a class=" {% if request.url_rule.endpoint == 'task.tasks' %} active {% endif %}" href="{{url_for('task.tasks')}}"><i class="fa fa-tasks"></i>Task Management</a></li>
+    <li><a href="{{url_for('auth.logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
+  </ul> 
+  <div class="social_media">
+    <a href="https://www.linkedin.com/in/faruq-abdulsalam-b2847b160/"><i class="fa fa-linkedin-square"></i></a>
+    <a href="https://twitter.com/_Ace_II/"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/faruq.t/"><i class="fa fa-instagram"></i></a>
+  </div>
+
+</div>
