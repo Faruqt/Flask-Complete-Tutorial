@@ -547,14 +547,14 @@ ul {
     }
   
 .btn {
-      color: #e2e1e6;
-      background-color: rgb(50, 54, 71);
+      color: #e2e1e6 !important;
+      background-color: rgb(50, 54, 71) !important;
       padding: .75rem 1.5rem;
       border-radius: .5rem;
       text-decoration: none;
       font-size: .9rem;
       outline: none;
-      border: none;
+      border: none !important;
       cursor: pointer;
     }
 
@@ -569,11 +569,10 @@ ul {
 }
 
 .register input{
-    width: 90%;
+    width: 100%;
     padding-left: 5px;
     border: 1px solid rgba(0,0,0,.15);
-    border-left: none;
-    border-radius: 0 .25rem .25rem 0;
+    border-radius: .25rem .25rem;
 }
 
 .input-group .fa-user{
@@ -707,21 +706,27 @@ form .Task{
 
 
 .logged_in , .registered {
-    margin: 0 20px;
+    margin: 0 50px;
 }
-.loginbtn button:hover, .registerbtn button:hover, .btn:hover{
-    background-color: rgb(50, 54, 71);
+.loginbtn input:hover, .registerbtn input:hover, .btn:hover{
+    color: #fff;
 }
 
 .login .textinput, .register .textinput{
     margin-left: unset;
 }
 
+.login form input{
+    width: 100%;
+}
+.login form p #remember_me{
+    width: revert;
+}
 form {
     border-radius: .5rem;
     margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .asteriskField {
     display: none;
