@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+
+<a class="brand-logo" href="{{ url_for('index') }}">
+    <img class="logo" src="{{ url_for('static', filename='Logo.svg') }}">
+    <div class="brand-logo-name"><strong> ToDo </strong> </div>
+</a>
+
 <div class="register">
     <form action="" method="post" class="p-3 border border-2">
         {{ form.hidden_tag() }}
