@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+
+<a class="brand-logo" href="{{ url_for('index') }}">
+    <img class="logo" src="{{ url_for('static', filename='Logo.svg') }}">
+    <div class="brand-logo-name"><strong> ToDo </strong> </div>
+</a>
+
+<!-- Display login error message-->
+{% if message %}
+<div class="alert alert-warning" role="alert">
+    <span class="closebtns" onclick="this.parentElement.style.display='none';">&times;</span>Invalid username or password
+    <h1>How are you</h1>
+</div>
+{% endif %}
+
 <div class="login">
     <form action="" method="post" novalidate class="p-3 border border-2">
         {{ form.hidden_tag() }}
