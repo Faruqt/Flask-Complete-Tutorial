@@ -12,34 +12,37 @@
 
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
-        <p>
+        <div class="inputContainer Task">
             {{ form.title.label }}<br>
-            {{ form.title(size=50) }}
+            {{ form.title(size=20) }}
             {% for error in form.title.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
-        </p>
-        <p>
-            {{ form.category}}<br>
+        </div>
+        <div class="inputContainer choice ">
+            {{ form.category.label}}<br>
+            {{ form.category}}
             {% for error in form.category.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
-        </p>
-        <p>
+        </div>
+        <div class="inputContainer  date ">
             {{ form.date.label }}<br>
             {{ form.date }}
             {% for error in form.date.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
-        </p>
-        <p>
+        </div>
+        <div class="inputContainer  time">
             {{ form.time.label }}<br>
             {{ form.time }}
             {% for error in form.title.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
-        </p>
-        <p>{{ form.submit() }}</p>
+        </div>
+        <div class="buttons">   
+            {{ form.submit(class="taskAdd btn") }}
+        </div> 
     </form>
       <!-- Task Delete Error alert -->
       {% if check %}
@@ -77,6 +80,7 @@
                         <label for="{{ todo.id }}"><span class="complete-">{{ todo.title }}</span></label>
                         <span class="taskDone" >at</span>
                         <strong class="taskDone"><i class="fa fa-clock-o"></i> {{ todo.time }}</strong>
+                        <span class="taskDone" >on</span>
                         <strong class="taskDatee taskDone"><i class="fa fa-calendar"></i> {{ todo.date }}</strong>
                         <span class="categorypage-{{ todo.category }}">{{ todo.category }}</span>
                         <button class="taskDelete " name="taskDelete" formnovalidate="" type="submit" ><i class="fa fa-trash-o icon"></i></button>
@@ -93,6 +97,7 @@
                           <label for="{{ todo.id }}"><span class="complete-">{{ todo.title }}</span></label>
                           <span class="taskDone" >at</span>
                           <strong class="taskDone"><i class="fa fa-clock-o"></i> {{ todo.time }}</strong>
+                          <span class="taskDone" >on</span>
                           <strong class="taskDatee taskDone"><i class="fa fa-calendar"></i> {{ todo.date }}</strong>
                           <span class="categorypage-{{ todo.category }}">{{ todo.category }}</span>
                           <button class="taskDelete " name="taskDelete" formnovalidate="" type="submit" ><i class="fa fa-trash-o icon"></i></button>
@@ -110,6 +115,7 @@
                       <label for="{{ todo.id }}"><span class="complete-">{{ todo.title }}</span></label>
                       <span class="taskDone" >at</span>
                       <strong class="taskDone"><i class="fa fa-clock-o"></i> {{ todo.time }}</strong>
+                      <span class="taskDone" >on</span>
                       <strong class="taskDatee taskDone"><i class="fa fa-calendar"></i> {{ todo.date }}</strong>
                       <span class="categorypage-{{ todo.category }}">{{ todo.category }}</span>
                       <button class="taskDelete " name="taskDelete" formnovalidate="" type="submit" ><i class="fa fa-trash-o icon"></i></button>
