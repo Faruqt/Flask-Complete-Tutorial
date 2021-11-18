@@ -606,6 +606,10 @@ ul {
     display: flex;
     justify-content: space-between;
  }
+ 
+ .inputContainer select{
+     width:185px;
+ }
 
  @media(max-width: 720px) {
     .inputContainer {
@@ -616,6 +620,9 @@ ul {
 @media(max-width: 500px) {
     .inputContainer {
         display: revert;
+    }
+    .inputContainer input, .inputContainer select{
+        width:95%;
     }
 }
 
@@ -630,9 +637,7 @@ ul {
 }
 
 .categories .date{
-    border-bottom: 1px solid #ebecf0;
     padding-bottom: 5px;
-    margin-bottom: 25px;
 }
 
 form .Task{
