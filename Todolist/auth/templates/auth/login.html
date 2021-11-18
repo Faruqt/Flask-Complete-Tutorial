@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Sign In</h1>
-    <form action="" method="post" novalidate>
+<div class="login">
+    <form action="" method="post" novalidate class="p-3 border border-2">
         {{ form.hidden_tag() }}
+        <div class="Login-Header">
+            <h4 class="mb-5">Login</h4>
+        </div>
         <p>
             {{ form.email.label }}<br>
             {{ form.email(size=32) }}
@@ -19,7 +22,14 @@
             {% endfor %}
         </p>
         <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
+        <div class="loginbtn">
+            {{ form.submit(class="btn btn-primary mt-3") }}
+        </div>
     </form>
-    <p>New User? <a href="{{ url_for('auth.register') }}">Click to Register!</a></p>
+    <div class=logged_in> 
+        <span>Dont have an account yet?</span> 
+        <a href="{{ url_for('auth.register') }}"> <i class="fa fa-hand-o-right" aria-hidden="true"></i>Register</a> 
+
+    </div>
+</div>
 {% endblock %}
