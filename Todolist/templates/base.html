@@ -12,7 +12,7 @@
 
       {% if request.url_rule.endpoint != 'index' %}   
         {% if request.url_rule.endpoint != 'auth.login' %} 
-          {% if request.url_rule.endpoint != 'auth.register' %} 
+            {% if request.url_rule.endpoint != 'auth.register' %} 
                <script src="{{ url_for('static', filename='sidebar.js') }}" defer></script>
             {% endif %}
         {% endif %}
