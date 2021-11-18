@@ -59,6 +59,4 @@ nosetests.xml
 .project
 .pydevproject
 
-# database
-todo.db
 
