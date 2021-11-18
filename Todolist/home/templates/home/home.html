@@ -58,7 +58,7 @@
                                     <strong class="taskDone"><i class="fa fa-clock-o"></i> {{ todo.time }}</strong>
                                     <span class="taskDone" >on</span>
                                     <strong class=" taskDatee taskDone"><i class="fa fa-calendar"></i> {{ todo.date }}</strong>
-                                    <span class="categoryy-{{ todo.category }}">{{ todo.category.name }}</span>
+                                    <span class="categoryy-{{ todo.category }}">{{ todo.category }}</span>
                                 </li>
                         {% endfor %}
                     </ul> <!--end All-Tasks-List -->
@@ -74,7 +74,7 @@
                                         <strong class="taskDone"><i class="fa fa-clock-o"></i> {{ todo.time }}</strong>
                                         <span class="taskDone" >on</span>
                                         <strong class=" taskDatee taskDone"><i class="fa fa-calendar"></i> {{ todo.date }}</strong>
-                                        <span class="categoryy-{{ todo.category }}">{{ todo.category.name }}</span>
+                                        <span class="categoryy-{{ todo.category }}">{{ todo.category }}</span>
                                     </li>
                             {% endif %}
                         {% endfor %}
