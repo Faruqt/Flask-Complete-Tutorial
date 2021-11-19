@@ -16,15 +16,6 @@ This is the completed and styled Todolist application built in the Flask Tutoria
  ```shell
        pip install -r requirements.txt
  ```
- - Make migrations
-```shell
-       flask db migrate -m "comment"
- ```
- Note: adding comment to the command above is optional 
- - Upgrade db
-```shell
-       flask db upgrade
- ```
  - Run the following command to run the code in development mode
 ```shell
        flask run
